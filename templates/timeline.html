@@ -1,0 +1,68 @@
+﻿{% extends "base.html" %}
+{% block title %}竞赛时间线 | 陶兴旺{% endblock %}
+{% block head %}
+<style>
+  .timeline-hero{padding:120px 24px 40px;text-align:center}
+  .timeline-hero h1{font-size:2.4rem;font-weight:900;margin-bottom:12px}
+  .timeline-hero p{color:var(--text-dim);max-width:600px;margin:0 auto}
+  .timeline-container{max-width:800px;margin:0 auto;padding:0 24px 80px;position:relative}
+  .timeline-container::before{content:"";position:absolute;left:30px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent),rgba(0,238,255,0.1))}
+  @media(min-width:768px){.timeline-container::before{left:50%;transform:translateX(-50%)}}
+  .tl-item{position:relative;margin-bottom:32px;padding-left:60px}
+  @media(min-width:768px){.tl-item{width:50%;padding-left:0}.tl-item:nth-child(odd){padding-right:40px;text-align:right}.tl-item:nth-child(even){margin-left:50%;padding-left:40px;text-align:left}}
+  .tl-dot{position:absolute;left:22px;top:8px;width:16px;height:16px;border-radius:50%;border:3px solid var(--accent);background:var(--bg);z-index:2}
+  @media(min-width:768px){.tl-dot{left:50%;transform:translateX(-50%)}}
+  .tl-dot.national{border-color:var(--gold);box-shadow:0 0 12px rgba(255,215,0,0.4)}
+  .tl-dot.provincial{border-color:var(--accent2);box-shadow:0 0 10px rgba(0,212,255,0.3)}
+  .tl-dot.ctf{border-color:var(--green);box-shadow:0 0 10px rgba(0,255,136,0.3)}
+  .tl-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:var(--transition)}
+  .tl-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .tl-date{font-family:var(--font-mono);font-size:0.78rem;color:var(--accent);margin-bottom:6px}
+  .tl-name{font-size:0.95rem;color:var(--text);line-height:1.5}
+  .tl-grade{display:inline-block;font-family:var(--font-mono);font-size:0.7rem;padding:2px 8px;border-radius:4px;margin-top:6px}
+  .tl-grade.national{background:rgba(255,215,0,0.12);color:var(--gold)}
+  .tl-grade.provincial{background:rgba(0,212,255,0.1);color:var(--accent2)}
+  .tl-legend{display:flex;justify-content:center;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+  .tl-legend span{display:flex;align-items:center;gap:6px;font-size:0.82rem;color:var(--text-dim)}
+  .tl-legend .dot{width:10px;height:10px;border-radius:50%}
+  .tl-year-divider{text-align:center;margin:32px 0;position:relative;z-index:2}
+  .tl-year-divider span{font-family:var(--font-mono);font-size:1.1rem;color:var(--accent);background:var(--bg);padding:4px 20px;border:1px solid var(--border);border-radius:20px}
+</style>
+{% endblock %}
+{% block content %}
+<div class="timeline-hero">
+  <h1>⚔️ 竞赛 & 荣誉时间线</h1>
+  <p>记录从CTF赛场到国家级竞赛的每一步成长，每一个里程碑</p>
+</div>
+<div class="timeline-container">
+  <div class="tl-legend">
+    <span><span class="dot" style="background:var(--gold)"></span> 国家级</span>
+    <span><span class="dot" style="background:var(--accent2)"></span> 省部级</span>
+    <span><span class="dot" style="background:var(--green)"></span> CTF/安全竞赛</span>
+  </div>
+  {% set all_events = [] %}
+  {% for a in awards %}
+    {% set _ = all_events.append({"date":a.date,"name":a.name,"grade":a.grade,"level":a.level,"type":"award"}) %}
+  {% endfor %}
+  {% for c in ctfs %}
+    {% set _ = all_events.append({"date":c.date,"name":c.description,"grade":"","level":"ctf","type":"ctf"}) %}
+  {% endfor %}
+  {% set all_events = all_events|sort(attribute="date",reverse=true) %}
+  {% set current_year = namespace(value="") %}
+  {% for e in all_events %}
+    {% set ey = e.date[:4] if e.date|length >= 4 else e.date %}
+    {% if ey != current_year.value %}
+      {% set current_year.value = ey %}
+      <div class="tl-year-divider"><span>{{ ey }}</span></div>
+    {% endif %}
+    <div class="tl-item">
+      <div class="tl-dot {{ e.level if e.level in ['national','provincial'] else 'ctf' }}"></div>
+      <div class="tl-card">
+        <div class="tl-date">{{ e.date }}</div>
+        <div class="tl-name">{{ e.name|safe }}</div>
+        {% if e.grade %}<span class="tl-grade {{ e.level }}">{{ e.grade }}</span>{% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

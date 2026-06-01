@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="陶兴旺 - 网络安全与AI安全工程师 | 个人博客">
+  <title>陶兴旺 | 网络安全 · AI安全</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">TXW<span class="accent">.sec</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">关于</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#awards">荣誉</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+      <button class="mobile-toggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span> AVAILABLE FOR OPPORTUNITIES</div>
+      <h1 class="hero-name">
+        <span class="greeting">Hi, I'm</span>
+        <span class="name">陶兴旺</span>
+      </h1>
+      <div class="hero-title"><span class="typing-text"></span><span class="cursor">|</span></div>
+      <p class="hero-desc">网络空间安全探索者 · AI安全大模型开发者 · CTF竞赛选手<br>专注智能安全防御体系构建，用AI重塑网络安全的边界</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary"><span>探索项目</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+        <a href="#contact" class="btn btn-outline">联系我</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">5+</span><span class="stat-label">核心项目</span></div>
+        <div class="stat"><span class="stat-num">15+</span><span class="stat-label">竞赛奖项</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">专业认证</span></div>
+        <div class="stat"><span class="stat-num">TOP3%</span><span class="stat-label">专业排名</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="glow-orb orb-1"></div><div class="glow-orb orb-2"></div><div class="glow-orb orb-3"></div>
+      <div class="code-snippet">
+        <div class="line"><span class="keyword">class</span> <span class="class-name">SecurityAI</span> {</div>
+        <div class="line">  <span class="prop">defense</span>: <span class="string">"zero-trust"</span></div>
+        <div class="line">  <span class="prop">model</span>: <span class="string">"MoE + LLM"</span></div>
+        <div class="line">  <span class="prop">threat_intel</span>: <span class="string">"real-time"</span></div>
+        <div class="line">}</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">01.</span> 关于我</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>我是一名<span class="highlight">网络空间安全与人工智能</span>交叉领域的探索者，就读于兰州博文科技学院信息管理与信息系统专业（专业排名前3%）。</p>
+          <p>从CTF赛场到AI安全大模型研发，我始终站在安全攻防的最前沿。主导开发了<span class="highlight">玄光安全GPT</span>、<span class="highlight">玄鉴安全检测系统</span>等多个安全产品，其中玄光安全GPT已迭代至2.0版本，检测准确率突破90%，并完成首家企业落地。</p>
+          <p>我相信<span class="highlight">AI for Security</span>的力量——用智能重塑安全的边界，让防御体系从"被动响应"走向"主动预见"。</p>
+          <div class="about-links">
+            <a href="https://github.com/huoqi1004" target="_blank" class="social-link"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg></a>
+            <a href="mailto:1716669652@qq.com" class="social-link"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 14 2 4"/></svg></a>
+            <a href="#" class="social-link"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="#0a0a0f" font-weight="900">C</text></svg></a>
+          </div>
+        </div>
+        <div class="about-edu">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <h3>教育背景</h3>
+            <div class="edu-info">
+              <p class="edu-school">兰州博文科技学院</p>
+              <p class="edu-major">信息管理与信息系统</p>
+              <p class="edu-year">2022 - 2026</p>
+              <p class="edu-rank">专业排名：前 3%</p>
+            </div>
+            <div class="edu-courses"><span>信息安全基础</span><span>C++</span><span>SQL</span><span>数据结构</span><span>计算机网络</span></div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon">💼</div>
+            <h3>实习经历</h3>
+            <div class="edu-info">
+              <p class="edu-school">兰州佳宏信息科技有限公司</p>
+              <p class="edu-major">网络工程师 · 2024.07 - 2024.08</p>
+              <p class="edu-desc">负责天水师范学院信息中心项目的网络设备安装部署与网络布线规划</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">02.</span> 技术能力</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>🔐 网络安全</h3>
+          <div class="skill-tags">
+            <span>CTF竞赛</span><span>Web安全</span><span>渗透测试</span><span>漏洞挖掘</span>
+            <span>应急响应</span><span>威胁情报</span><span>安全运维</span><span>代码审计</span>
+            <span>网络攻防</span><span>红蓝对抗</span><span>安全评估</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>🤖 AI & 大模型</h3>
+          <div class="skill-tags">
+            <span>大模型微调</span><span>MoE架构</span><span>VGG16</span><span>CNN</span>
+            <span>模型迁移</span><span>模型压缩</span><span>边缘部署</span><span>NLP</span>
+            <span>PyTorch</span><span>深度学习</span><span>AI Agent</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>💻 开发 & 工具</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>C++</span><span>SQL</span><span>Linux</span>
+            <span>Docker</span><span>Git</span><span>GitHub</span><span>网络布线</span>
+            <span>设备部署</span><span>技术文档</span><span>项目管理</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">03.</span> 核心项目</h2>
+
+      <div class="project-card featured">
+        <div class="project-header"><span class="project-tag tag-featured">🌟 旗舰项目</span><span class="project-version">v2.0</span></div>
+        <h3 class="project-name">玄光安全GPT</h3>
+        <p class="project-role">项目负责人 · 产品经理</p>
+        <p class="project-desc">基于通用大模型+安全专有MoE协同监督机制的网络空间安全大模型。有效应对当前主流网络攻击态势，同时覆盖传统网络安全问题，尤其擅长企业级数据安全防护。</p>
+        <div class="project-tech"><span>大语言模型</span><span>MoE架构</span><span>协同监督</span><span>威胁检测</span><span>数据安全</span></div>
+        <div class="project-metrics">
+          <div class="metric"><span class="metric-val">>90%</span><span>检测准确率</span></div>
+          <div class="metric"><span class="metric-val">1家</span><span>企业落地</span></div>
+          <div class="metric"><span class="metric-val">v2.0</span><span>持续迭代</span></div>
+        </div>
+        <a href="https://github.com/huoqi1004/XuanGuang-GPT-" target="_blank" class="project-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg> 查看仓库</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header"><span class="project-tag tag-award">🏆 多项大奖</span></div>
+        <h3 class="project-name">玄鉴安全检测系统</h3>
+        <p class="project-role">项目负责人 · 架构设计师</p>
+        <p class="project-desc">基于大模型技术栈的智能安全检测系统，集成漏洞检测、资产测绘、威胁情报匹配三大核心能力。既可从安全知识库进行实时匹配推理，也可从全网实时获取威胁情报，为企业信息安全提供全方位防护。</p>
+        <div class="project-tech"><span>大模型</span><span>漏洞检测</span><span>资产测绘</span><span>威胁情报</span><span>RAG</span></div>
+        <div class="project-metrics">
+          <div class="metric"><span class="metric-val">10+</span><span>竞赛奖项</span></div>
+          <div class="metric"><span class="metric-val">2家</span><span>企业对接</span></div>
+          <div class="metric"><span class="metric-val">省级</span><span>立项项目</span></div>
+        </div>
+        <a href="https://github.com/youngestar/System.git" target="_blank" class="project-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg> 查看仓库</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header"><span class="project-tag tag-award">🏆 挑战杯国家二等奖</span></div>
+        <h3 class="project-name">神农AI识别系统</h3>
+        <p class="project-role">产品孵化</p>
+        <p class="project-desc">基于VGG16+CNN特征融合的农作物病虫害识别系统。通过多尺度特征融合、动态学习率优化、模型压缩等技术，在5种病害3300张图像上准确率达98.6%，模型压缩至2.1M，边缘设备32 FPS实时推理。</p>
+        <div class="project-tech"><span>VGG16</span><span>CNN</span><span>特征融合</span><span>模型压缩</span><span>边缘计算</span><span>Jetson Nano</span></div>
+        <div class="project-metrics">
+          <div class="metric"><span class="metric-val">98.6%</span><span>识别准确率</span></div>
+          <div class="metric"><span class="metric-val">2.1MB</span><span>模型体积</span></div>
+          <div class="metric"><span class="metric-val">32FPS</span><span>边缘推理</span></div>
+        </div>
+        <a href="https://github.com/AAAkater/VGG.git" target="_blank" class="project-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg> 查看仓库</a>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-name">水木智慧安防平台</h3>
+        <p class="project-role">项目负责人</p>
+        <p class="project-desc">面向大型场馆、医院、学校等关键基础设施的智能安防平台。融合边缘计算、智能感知、深度学习与区块链技术，实现自动化、智能化、轻量化的实时安全监控与应急响应。</p>
+        <div class="project-tech"><span>边缘计算</span><span>深度学习</span><span>智能感知</span><span>区块链</span><span>实时监控</span></div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-name">智慧物流信息系统</h3>
+        <p class="project-role">项目负责人</p>
+        <p class="project-desc">基于5G、IoT、云计算等技术构建的全链路智慧物流平台，覆盖采购、运输、装卸、仓储、安全全业务场景，实现物流流程的智能化与智慧化。获第十四届挑战杯校级银奖。</p>
+        <div class="project-tech"><span>5G</span><span>IoT</span><span>云计算</span><span>大数据</span><span>分布式存储</span></div>
+        <div class="project-metrics">
+          <div class="metric"><span class="metric-val">校级</span><span>银奖</span></div>
+          <div class="metric"><span class="metric-val">全链路</span><span>业务覆盖</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards" class="awards section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">04.</span> 荣誉 & 认证</h2>
+      <div class="awards-grid">
+        <div class="award-level">
+          <h3 class="award-level-title">🏅 国家级奖项</h3>
+          <ul class="award-list">
+            <li><span class="award-year">2025.10</span><span class="award-name">第十九届挑战杯全国大学生课外学术科技作品竞赛</span><span class="award-grade grade-national">国家二等奖</span></li>
+            <li><span class="award-year">2025.08</span><span class="award-name">第一届全国大学生人工智能安全竞赛全国总决赛</span><span class="award-grade grade-national">国家二等奖</span></li>
+            <li><span class="award-year">2024.03</span><span class="award-name">第四届复兴杯全国大学生网络安全精英赛</span><span class="award-grade grade-national">全国排名1229</span></li>
+            <li><span class="award-year">2024.06</span><span class="award-name">第八届全国职工职业技能大赛上海选拔赛</span><span class="award-grade grade-national">第68名</span></li>
+            <li><span class="award-year">2025.08</span><span class="award-name">2025全国开源大赛决赛</span><span class="award-grade grade-national">入围</span></li>
+          </ul>
+        </div>
+        <div class="award-level">
+          <h3 class="award-level-title">🏆 省部级奖项</h3>
+          <ul class="award-list">
+            <li><span class="award-year">2025.09</span><span class="award-name">甘肃省第十九届挑战杯</span><span class="award-grade grade-provincial">省级特等奖</span></li>
+            <li><span class="award-year">2025.06</span><span class="award-name">第十一届甘肃省大学生创新大赛</span><span class="award-grade grade-provincial">省级金奖+银奖</span></li>
+            <li><span class="award-year">2024.09</span><span class="award-name">第十四届挑战杯创业计划竞赛</span><span class="award-grade grade-provincial">省级铜奖</span></li>
+            <li><span class="award-year">2023.12</span><span class="award-name">第十三届新华三杯大学生数字技术大赛</span><span class="award-grade grade-provincial">省级二等奖</span></li>
+            <li><span class="award-year">2025.05</span><span class="award-name">第二十届波音杯 · 应急先锋</span><span class="award-grade grade-provincial">省级二等奖</span></li>
+            <li><span class="award-year">2025.11</span><span class="award-name">甘肃省创新方法大赛</span><span class="award-grade grade-provincial">省级二等奖</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="certs-section">
+        <h3 class="award-level-title">📜 专业认证</h3>
+        <div class="certs-grid">
+          <div class="cert-card"><div class="cert-icon">☁️</div><h4>ACA 助理工程师</h4><p>阿里云云计算助理工程师认证</p></div>
+          <div class="cert-card"><div class="cert-icon">🔐</div><h4>H3C-NE</h4><p>新华三网络安全工程师</p></div>
+          <div class="cert-card"><div class="cert-icon">📝</div><h4>软件著作权</h4><p>计算机软件著作权登记</p></div>
+          <div class="cert-card"><div class="cert-icon">🌍</div><h4>AGE Fellow</h4><p>AGE全球共济会荣誉博士</p></div>
+          <div class="cert-card"><div class="cert-icon">🤖</div><h4>CAAI会员</h4><p>中国人工智能学会</p></div>
+        </div>
+      </div>
+      <div class="ctf-section">
+        <h3 class="award-level-title">⚔️ CTF & 安全竞赛</h3>
+        <div class="ctf-timeline">
+          <div class="ctf-item"><span class="ctf-date">2025.05</span><span>第二届齐鲁杯CTF大赛 — <strong>应急先锋称号</strong>（全国排名39）</span></div>
+          <div class="ctf-item"><span class="ctf-date">2025.04</span><span>第十五届蓝桥杯 — <strong>校级一等奖</strong></span></div>
+          <div class="ctf-item"><span class="ctf-date">2025.04</span><span>第三届网络空间安全前沿论坛 · 青年论坛 — 科技成果展示</span></div>
+          <div class="ctf-item"><span class="ctf-date">2024.05</span><span>ISCC信息安全竞赛</span></div>
+          <div class="ctf-item"><span class="ctf-date">2024.05</span><span>第二届京麒CTF大赛</span></div>
+          <div class="ctf-item"><span class="ctf-date">2024.04</span><span>阿里巴巴网络安全CTF专题赛</span></div>
+          <div class="ctf-item"><span class="ctf-date">2025.11</span><span>全国AI Agent专题赛 — <strong>最佳跨越奖</strong></span></div>
+        </div>
+      </div>
+      <div class="honors-extra">
+        <h3 class="award-level-title">⭐ 其他荣誉</h3>
+        <ul class="award-list">
+          <li><span class="award-year">2025</span>三好学生</li>
+          <li><span class="award-year">2024.05</span>优秀共青团员</li>
+          <li><span class="award-year">2022.04</span>圣日耳曼杯 · 省级二等奖</li>
+          <li><span class="award-year">2023.05</span>普通话考试通过 · 普通话推广协会</li>
+          <li><span class="award-year">2023</span>全国大学生数字技术应用大赛 · 三等奖</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">05.</span> 联系我</h2>
+      <div class="contact-content">
+        <p class="contact-intro">如果你对我的项目感兴趣，或者想交流网络安全与AI相关技术，欢迎随时联系我。</p>
+        <div class="contact-cards">
+          <a href="mailto:1716669652@qq.com" class="contact-card"><div class="contact-icon">📧</div><h4>电子邮箱</h4><p>1716669652@qq.com</p></a>
+          <div class="contact-card"><div class="contact-icon">📱</div><h4>电话</h4><p>13145244706</p></div>
+          <div class="contact-card"><div class="contact-icon">💬</div><h4>微信</h4><p>txw20000701</p></div>
+          <a href="https://github.com/huoqi1004" target="_blank" class="contact-card"><div class="contact-icon">🐙</div><h4>GitHub</h4><p>github.com/huoqi1004</p></a>
+        </div>
+        <div class="contact-location"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8z"/></svg> 中国 · 兰州</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 陶兴旺 · 网络安全与AI安全探索者</p>
+      <p class="footer-tagline">Securing the future with AI.</p>
+    </div>
+  </footer>
+
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

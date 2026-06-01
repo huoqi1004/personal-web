@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>管理员登录 | 陶兴旺</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Noto Sans SC",sans-serif;background:#0a0a0f;color:#e0e0e0;display:flex;align-items:center;justify-content:center;min-height:100vh}
+    .login-box{background:rgba(15,15,30,0.9);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:48px;width:100%;max-width:400px;text-align:center}
+    h1{font-size:1.5rem;margin-bottom:8px;color:#0ef}
+    p{color:#8892a4;font-size:0.9rem;margin-bottom:32px}
+    input{width:100%;padding:14px 16px;margin-bottom:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#e0e0e0;font-size:0.95rem;outline:none;transition:.3s}
+    input:focus{border-color:#0ef;box-shadow:0 0 20px rgba(0,238,255,0.15)}
+    button{width:100%;padding:14px;background:#0ef;color:#0a0a0f;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:.3s}
+    button:hover{box-shadow:0 0 30px rgba(0,238,255,0.4)}
+    .error{color:#ff4757;font-size:0.85rem;margin-top:12px;display:none}
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>🔐 TXW.sec</h1>
+    <p>管理员登录</p>
+    <input type="text" id="username" placeholder="用户名" value="admin">
+    <input type="password" id="password" placeholder="密码" value="admin123">
+    <button onclick="doLogin()">登 录</button>
+    <div class="error" id="error">用户名或密码错误</div>
+  </div>
+  <script>
+    async function doLogin(){
+      const u=document.getElementById("username").value;
+      const p=document.getElementById("password").value;
+      const r=await fetch("/admin/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({username:u,password:p})});
+      if(r.ok){window.location="/admin/dashboard"}else{document.getElementById("error").style.display="block"}
+    }
+    document.getElementById("password").addEventListener("keydown",e=>{if(e.key==="Enter")doLogin()});
+  </script>
+</body>
+</html>

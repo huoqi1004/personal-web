@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="陶兴旺 - 网络安全与AI安全工程师 | 个人博客">
+  <title>{% block title %}陶兴旺 | 网络安全 · AI安全{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap">
+  {% if ga_id %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","{{ ga_id }}");</script>
+  {% endif %}
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">TXW<span class="accent">.sec</span></a>
+      <ul class="nav-links">
+        <li><a href="/#about">关于</a></li>
+        <li><a href="/#projects">项目</a></li>
+        <li><a href="/#awards">荣誉</a></li>
+        <li><a href="/timeline">时间线</a></li>
+        <li><a href="/#contact">联系</a></li>
+      </ul>
+      <button class="mobile-toggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  {% block content %}{% endblock %}
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 陶兴旺 · 网络安全与AI安全探索者</p>
+      <p class="footer-tagline">Securing the future with AI.</p>
+    </div>
+  </footer>
+  <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% block scripts %}{% endblock %}
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("/static/sw.js")}</script></body>
+</html>
