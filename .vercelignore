@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+.git
+.gitignore
+.vscode
+*.md
+README.md
+LICENSE
+node_modules/
+index.js

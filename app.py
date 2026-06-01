@@ -1,4 +1,4 @@
-﻿"""陶兴旺个人网站 - Flask 后端"""
+"""陶兴旺个人网站 - Flask 后端"""
 import os, sqlite3, hashlib, secrets
 from datetime import datetime
 from functools import wraps
@@ -7,7 +7,8 @@ from flask import Flask, render_template, request, redirect, url_for, session, j
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(32)
-DATABASE = os.path.join(BASE_DIR, "data", "site.db")
+DATA_DIR = "/tmp/data" if os.environ.get("VERCEL") else os.path.join(BASE_DIR, "data")
+DATABASE = os.path.join(DATA_DIR, "site.db")
 
 # ── Database ──────────────────────────────────────────────
 def get_db():
@@ -173,8 +174,7 @@ def get_site_config(key, default=""):
 # ── Init ──────────────────────────────────────────────────
 @app.before_request
 def ensure_db():
-    import os
-    os.makedirs(os.path.join(BASE_DIR,"data"), exist_ok=True)
+    os.makedirs(DATA_DIR, exist_ok=True)
     os.makedirs(os.path.join(BASE_DIR,"templates"), exist_ok=True)
     init_db()
     seed_data()
@@ -400,7 +400,7 @@ def api_blog_refresh():
 
 # ── Run ───────────────────────────────────────────────────
 if __name__ == "__main__":
-    os.makedirs(os.path.join(BASE_DIR,"data"), exist_ok=True)
+    os.makedirs(DATA_DIR, exist_ok=True)
     os.makedirs(os.path.join(BASE_DIR,"templates"), exist_ok=True)
     init_db()
     app.run(debug=True, host="0.0.0.0", port=5000)
