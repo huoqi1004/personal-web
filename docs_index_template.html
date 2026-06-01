@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>陶兴旺 | 网络安全 · AI安全</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TXW<span class="accent">.sec</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">关于</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="honors.html">荣誉墙</a></li>
+        <li><a href="timeline.html">时间线</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span> AVAILABLE FOR OPPORTUNITIES</div>
+      <h1 class="hero-name">
+        <span class="greeting">Hi, I'm</span>
+        <span class="name" id="hero-name">陶兴旺</span>
+      </h1>
+      <div class="hero-title"><span class="typing-text"></span><span class="cursor">|</span></div>
+      <p class="hero-desc" id="hero-desc"></p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">探索项目</a>
+        <a href="#contact" class="btn btn-outline">联系我</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" id="stat-projects">0+</span><span class="stat-label">核心项目</span></div>
+        <div class="stat"><span class="stat-num">15+</span><span class="stat-label">竞赛奖项</span></div>
+        <div class="stat"><span class="stat-num" id="stat-certs">0</span><span class="stat-label">专业认证</span></div>
+        <div class="stat"><span class="stat-num">TOP3%</span><span class="stat-label">专业排名</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">01.</span> 关于我</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p id="about-p1"></p>
+          <p id="about-p2"></p>
+          <p id="about-p3"></p>
+        </div>
+        <div class="about-edu" id="edu-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">02.</span> 技术能力</h2>
+      <div class="skills-grid" id="skills-container"></div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">03.</span> 核心项目</h2>
+      <div id="projects-container"></div>
+    </div>
+  </section>
+
+  <section id="honor-wall-carousel" class="honor-wall-carousel section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="num">🏆</span> 荣誉墙</h2>
+        <a href="honors.html" class="view-all-link">查看全部 →</a>
+      </div>
+      <div class="carousel-container">
+        <div class="carousel-track" id="honorCarousel"></div>
+        <button class="carousel-btn carousel-prev" id="prevBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="carousel-btn carousel-next" id="nextBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards" class="awards section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">04.</span> 荣誉 & 认证</h2>
+      <div class="awards-grid">
+        <div class="award-level">
+          <h3 class="award-level-title">🏅 国家级奖项</h3>
+          <ul class="award-list" id="awards-nat"></ul>
+        </div>
+        <div class="award-level">
+          <h3 class="award-level-title">🏆 省部级奖项</h3>
+          <ul class="award-list" id="awards-prov"></ul>
+        </div>
+      </div>
+      <div class="certs-section">
+        <h3 class="award-level-title">📜 专业认证</h3>
+        <div class="certs-grid" id="certs-container"></div>
+      </div>
+      <div class="ctf-section">
+        <h3 class="award-level-title">⚔️ CTF & 安全竞赛</h3>
+        <div class="ctf-timeline" id="ctf-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">05.</span> 联系我</h2>
+      <div class="contact-content">
+        <p class="contact-intro">如果你对我的项目感兴趣，或者想交流网络安全与AI相关技术，欢迎随时联系我。</p>
+        <div class="contact-cards" id="contact-cards"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 陶兴旺 · 网络安全与AI安全探索者</p>
+    </div>
+  </footer>
+
+  <script src="static/js/particles.js"></script>
+  <script src="static/data.js"></script>
+  <script src="static/js/main.js"></script>
+  <script src="static/render.js"></script>
+</body>
+</html>
