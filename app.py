@@ -199,7 +199,18 @@ def index():
     edu = db.execute("SELECT * FROM education ORDER BY sort_order").fetchall()
     ga_id = get_site_config("ga_id","")
     giscus = {"repo":get_site_config("giscus_repo",""),"repo_id":get_site_config("giscus_repo_id",""),"category":get_site_config("giscus_category",""),"category_id":get_site_config("giscus_category_id","")}
-    return render_template("index.html", info=info, skills=skills, projects=proj_list, awards_nat=awards_nat, awards_prov=awards_prov, awards_other=awards_other, certs=certs, ctfs=ctfs, edu=edu, ga_id=ga_id, giscus=giscus)
+    
+    images_dir = os.path.join(BASE_DIR, "images")
+    honor_images = []
+    if os.path.exists(images_dir):
+        image_extensions = ["jpg", "jpeg", "png", "gif", "webp"]
+        for ext in image_extensions:
+            pattern = os.path.join(images_dir, f"*.{ext}")
+            for filepath in glob.glob(pattern):
+                filename = os.path.basename(filepath)
+                honor_images.append(parse_honor_image(filename))
+    
+    return render_template("index.html", info=info, skills=skills, projects=proj_list, awards_nat=awards_nat, awards_prov=awards_prov, awards_other=awards_other, certs=certs, ctfs=ctfs, edu=edu, ga_id=ga_id, giscus=giscus, images=honor_images)
 
 @app.route("/project/<slug>")
 def project_detail(slug):
@@ -388,7 +399,6 @@ def api_blog():
 @app.route("/api/admin/blog", methods=["POST"])
 @admin_api
 def api_blog_refresh():
-    # Manual blog sync – admin posts URLs
     data = request.get_json()
     db = get_db()
     if data.get("action") == "add":
@@ -397,6 +407,60 @@ def api_blog_refresh():
         db.execute("DELETE FROM blog_posts")
     db.commit()
     return jsonify({"ok":True})
+
+# ── Honor Wall ─────────────────────────────────────────────
+import glob
+from flask import send_from_directory
+
+def parse_honor_image(filename):
+    basename = os.path.splitext(filename)[0]
+    parts = basename.split("_")
+    if len(parts) >= 2:
+        level = parts[-1] if parts[-1] in ["national", "provincial", "other"] else "other"
+        name = "_".join(parts[:-1]) if level in parts else basename
+    else:
+        level = "other"
+        name = basename
+    return {"name": name, "level": level, "filename": filename}
+
+@app.route("/api/honors/images")
+def api_honor_images():
+    images_dir = os.path.join(BASE_DIR, "images")
+    if not os.path.exists(images_dir):
+        return jsonify([])
+    image_extensions = ["jpg", "jpeg", "png", "gif", "webp"]
+    images = []
+    for ext in image_extensions:
+        pattern = os.path.join(images_dir, f"*.{ext}")
+        for filepath in glob.glob(pattern):
+            filename = os.path.basename(filepath)
+            images.append(parse_honor_image(filename))
+    return jsonify(images)
+
+@app.route("/images/<filename>")
+def serve_honor_image(filename):
+    images_dir = os.path.join(BASE_DIR, "images")
+    safe_filename = os.path.basename(filename)
+    filepath = os.path.join(images_dir, safe_filename)
+    if not os.path.exists(filepath):
+        return "Image not found", 404
+    return send_from_directory(images_dir, safe_filename)
+
+@app.route("/honors")
+def honors_page():
+    images_dir = os.path.join(BASE_DIR, "images")
+    if not os.path.exists(images_dir):
+        images = []
+    else:
+        image_extensions = ["jpg", "jpeg", "png", "gif", "webp"]
+        images = []
+        for ext in image_extensions:
+            pattern = os.path.join(images_dir, f"*.{ext}")
+            for filepath in glob.glob(pattern):
+                filename = os.path.basename(filepath)
+                images.append(parse_honor_image(filename))
+    ga_id = get_site_config("ga_id", "")
+    return render_template("honors.html", images=images, ga_id=ga_id)
 
 # ── Run ───────────────────────────────────────────────────
 if __name__ == "__main__":

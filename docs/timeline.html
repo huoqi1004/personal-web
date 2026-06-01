@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时间线 | 陶兴旺</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TXW<span class="accent">.sec</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">关于</a></li>
+        <li><a href="index.html#projects">项目</a></li>
+        <li><a href="honors.html">荣誉墙</a></li>
+        <li><a href="timeline.html" class="active">时间线</a></li>
+        <li><a href="index.html#contact">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">📅</span> 时间线</h2>
+      <div id="timeline-content"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 陶兴旺 · 网络安全与AI安全探索者</p>
+    </div>
+  </footer>
+
+  <script src="static/js/particles.js"></script>
+  <script src="static/data.js"></script>
+  <script>
+  (function(){
+    const items = [];
+    (SITE_DATA.awards_nat || []).forEach(a => items.push({date: a.date, type: "国家级奖项", text: a.name, grade: a.grade}));
+    (SITE_DATA.awards_prov || []).forEach(a => items.push({date: a.date, type: "省部级奖项", text: a.name, grade: a.grade}));
+    (SITE_DATA.ctfs || []).forEach(c => items.push({date: c.date, type: "CTF", text: c.description}));
+    items.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    const container = document.getElementById("timeline-content");
+    items.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "ctf-item";
+      div.innerHTML = `<span class="ctf-date">${item.date}</span> <strong>[${item.type}]</strong> ${item.text}${item.grade ? " · " + item.grade : ""}`;
+      container.appendChild(div);
+    });
+  })();
+  </script>
+</body>
+</html>

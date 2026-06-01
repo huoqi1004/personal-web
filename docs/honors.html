@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>荣誉墙 | 陶兴旺</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TXW<span class="accent">.sec</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">关于</a></li>
+        <li><a href="index.html#projects">项目</a></li>
+        <li><a href="honors.html" class="active">荣誉墙</a></li>
+        <li><a href="timeline.html">时间线</a></li>
+        <li><a href="index.html#contact">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="honors-wall" class="honors-wall section">
+    <div class="container">
+      <h2 class="section-title"><span class="num">🏅</span> 荣誉墙</h2>
+      <p class="section-subtitle">记录每一个奋斗的足迹，见证每一份来之不易的荣誉</p>
+      <div class="honors-filter">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="national">国家级</button>
+        <button class="filter-btn" data-filter="provincial">省部级</button>
+        <button class="filter-btn" data-filter="other">其他</button>
+      </div>
+      <div class="honors-grid" id="honors-grid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 陶兴旺 · 网络安全与AI安全探索者</p>
+    </div>
+  </footer>
+
+  <script src="static/js/particles.js"></script>
+  <script src="static/data.js"></script>
+  <script>
+  (function(){
+    const images = SITE_DATA.honor_images || [];
+    const grid = document.getElementById("honors-grid");
+    images.forEach(img => {
+      const levelText = img.level === "national" ? "国家级" : img.level === "provincial" ? "省部级" : "其他";
+      const card = document.createElement("div");
+      card.className = "honor-card";
+      card.dataset.level = img.level;
+      card.innerHTML = `<div class="honor-image-wrapper"><img src="images/${img.filename}" alt="${img.name}" class="honor-image"><div class="honor-overlay"><span class="honor-name">${img.name}</span><span class="honor-level">${levelText}</span></div></div>`;
+      grid.appendChild(card);
+    });
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+      btn.addEventListener("click", function(){
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        this.classList.add("active");
+        const filter = this.dataset.filter;
+        document.querySelectorAll(".honor-card").forEach(card => {
+          card.style.display = (filter === "all" || card.dataset.level === filter) ? "block" : "none";
+        });
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

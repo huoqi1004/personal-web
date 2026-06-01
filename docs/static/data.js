@@ -1,0 +1,584 @@
+window.SITE_DATA = {
+  "info": {
+    "ga_id": "",
+    "giscus_repo": "",
+    "giscus_repo_id": "",
+    "giscus_category": "",
+    "giscus_category_id": "",
+    "name": "陶兴旺",
+    "title": "网络空间安全探索者 · AI安全大模型开发者 · CTF竞赛选手",
+    "subtitle": "专注智能安全防御体系构建，用AI重塑网络安全的边界",
+    "hero_badge": "AVAILABLE FOR OPPORTUNITIES",
+    "hero_typing_titles": "网络空间安全探索者,AI安全大模型开发者,CTF竞赛选手,智能安全防御架构师",
+    "location": "中国 · 兰州",
+    "email": "1716669652@qq.com",
+    "phone": "暂无",
+    "wechat": "txw20000701",
+    "github": "https://github.com/huoqi1004",
+    "csdn": "https://blog.csdn.net/m0_74756958?spm=1000.2115.3001.5343",
+    "about_p1": "我是一名网络空间安全与人工智能交叉领域的探索者，毕业于兰州博文科技学院信息管理与信息系统专业（专业排名前3%）。",
+    "about_p2": "从CTF赛场到AI安全大模型研发，我始终站在安全攻防的最前沿。主导开发了玄光安全GPT、玄鉴安全智能体等多个安全产品，其中玄光安全GPT已迭代至2.0版本，检测准确率突破90%，并完成企业合作落地。",
+    "about_p3": "我相信AI for Security的力量——用智能重塑安全的边界，让防御体系从\"被动响应\"走向\"主动预见\"。"
+  },
+  "skills": [
+    {
+      "category": "AI & 大模型",
+      "name": "MoE架构"
+    },
+    {
+      "category": "AI & 大模型",
+      "name": "VGG16"
+    },
+    {
+      "category": "AI & 大模型",
+      "name": "CNN"
+    },
+    {
+      "category": "AI & 大模型",
+      "name": "深度学习"
+    },
+    {
+      "category": "AI & 大模型",
+      "name": "AI Agent"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "Python"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "MYSQL"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "Linux"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "Docker"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "Git"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "GitHub"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "网络布线"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "设备部署"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "技术文档"
+    },
+    {
+      "category": "开发 & 工具",
+      "name": "项目管理"
+    },
+    {
+      "category": "网络安全",
+      "name": "CTF竞赛"
+    },
+    {
+      "category": "网络安全",
+      "name": "Web安全"
+    },
+    {
+      "category": "网络安全",
+      "name": "渗透测试"
+    },
+    {
+      "category": "网络安全",
+      "name": "漏洞挖掘"
+    },
+    {
+      "category": "网络安全",
+      "name": "应急响应"
+    },
+    {
+      "category": "网络安全",
+      "name": "威胁情报"
+    },
+    {
+      "category": "网络安全",
+      "name": "安全运维"
+    },
+    {
+      "category": "网络安全",
+      "name": "安全评估"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "玄光安全GPT",
+      "slug": "xuan-guang-gpt",
+      "role": "项目负责人 · 产品经理",
+      "description": "基于通用大模型+安全专有MoE协同监督机制的网络空间安全大模型。有效应对当前主流网络攻击态势，同时覆盖传统网络安全问题，尤其擅长企业级数据安全防护。",
+      "version": "v2.0",
+      "is_featured": 1,
+      "repo_url": "https://github.com/huoqi1004/XuanGuang-GPT-",
+      "sort_order": 0,
+      "techs": [
+        "大语言模型",
+        "MoE架构",
+        "协同监督",
+        "威胁检测",
+        "数据安全"
+      ],
+      "metrics": [
+        {
+          "value": ">90%",
+          "label": "检测准确率"
+        },
+        {
+          "value": "1家",
+          "label": "企业落地"
+        },
+        {
+          "value": "v2.0",
+          "label": "持续迭代"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "天穹安防系统",
+      "slug": "",
+      "role": "项目负责人，产品经理",
+      "description": "我们基于天穹安防垂域大模型设计了天穹安防系统。系统各个组件将基于自主训练的大模型来运行。针对病毒攻击和漏洞攻击等一系列网络安全风险，系统将建设完备的病毒库和漏洞库。\n天穹安防 垂域大模型既可以从全网病毒特征库和自有漏洞和病毒库中进行实时匹配审计，也可以从全网实时攻击动态中获取威胁情报，辅助相关技术人员进行有效防御。由此，天穹安防系统可以更好地保护企业信息系统安全，减轻相关企业的负担。\n该项目先后斩获大小挑战杯，正大杯，三创赛，人工智能安全竞赛等各类国家级，省部级奖项十余项，并获省级项目结项，第六届网络空间安全前沿论坛（常安论坛）科技成果展示项目。\n项目已取得1.0版本软著两项，对接合作企业三家。\n",
+      "version": "V 2.0",
+      "is_featured": 0,
+      "repo_url": "https://github.com/youngestar/System.git",
+      "sort_order": 0,
+      "techs": [],
+      "metrics": []
+    },
+    {
+      "id": 2,
+      "name": "玄鉴安全智能体",
+      "slug": "xuan-jian",
+      "role": "项目负责人 · 架构设计师",
+      "description": "基于大模型技术栈的智能安全检测系统，集成漏洞检测、资产测绘、威胁情报匹配三大核心能力。既可从安全知识库进行实时匹配推理，也可从全网实时获取威胁情报，为企业信息安全提供全方位防护。",
+      "version": "",
+      "is_featured": 0,
+      "repo_url": "https://github.com/youngestar/System.git",
+      "sort_order": 1,
+      "techs": [
+        "大模型",
+        "漏洞检测",
+        "资产测绘",
+        "威胁情报",
+        "RAG"
+      ],
+      "metrics": [
+        {
+          "value": "10+",
+          "label": "竞赛奖项"
+        },
+        {
+          "value": "2家",
+          "label": "企业对接"
+        },
+        {
+          "value": "省级",
+          "label": "立项项目"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "神农AI识别系统",
+      "slug": "shen-nong-ai",
+      "role": "产品孵化",
+      "description": "基于VGG16+CNN特征融合的农作物病虫害识别系统。通过多尺度特征融合、动态学习率优化、模型压缩等技术，在5种病害3300张图像上准确率达98.6%，模型压缩至2.1M，边缘设备32 FPS实时推理。",
+      "version": "",
+      "is_featured": 0,
+      "repo_url": "https://github.com/AAAkater/VGG.git",
+      "sort_order": 2,
+      "techs": [
+        "VGG16",
+        "CNN",
+        "特征融合",
+        "模型压缩",
+        "边缘计算",
+        "Jetson Nano"
+      ],
+      "metrics": [
+        {
+          "value": "98.6%",
+          "label": "识别准确率"
+        },
+        {
+          "value": "2.1MB",
+          "label": "模型体积"
+        },
+        {
+          "value": "32FPS",
+          "label": "边缘推理"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "曜星智慧物流系统",
+      "slug": "zhi-hui-wu-liu",
+      "role": "项目负责人",
+      "description": "基于5G、IoT、云计算等技术构建的全链路智慧物流平台，覆盖采购、运输、装卸、仓储、安全全业务场景，实现物流流程的智能化与智慧化。获第十四届挑战杯校级银奖。",
+      "version": "",
+      "is_featured": 0,
+      "repo_url": "",
+      "sort_order": 4,
+      "techs": [
+        "5G",
+        "IoT",
+        "云计算",
+        "大数据",
+        "分布式存储"
+      ],
+      "metrics": [
+        {
+          "value": "校级",
+          "label": "银奖"
+        },
+        {
+          "value": "全链路",
+          "label": "业务覆盖"
+        }
+      ]
+    }
+  ],
+  "awards_nat": [
+    {
+      "id": 1,
+      "level": "national",
+      "date": "2025.10",
+      "name": "第十九届挑战杯全国大学生课外学术科技作品竞赛",
+      "grade": "国家三等奖",
+      "sort_order": 0
+    },
+    {
+      "id": 2,
+      "level": "national",
+      "date": "2025.08",
+      "name": "第一届全国大学生人工智能安全竞赛全国总决赛",
+      "grade": "国家三等奖",
+      "sort_order": 1
+    },
+    {
+      "id": 3,
+      "level": "national",
+      "date": "2024.03",
+      "name": "第四届复兴杯全国大学生网络安全精英赛",
+      "grade": "全国排名1229",
+      "sort_order": 2
+    },
+    {
+      "id": 4,
+      "level": "national",
+      "date": "2024.06",
+      "name": "第八届全国职工职业技能大赛上海选拔赛（网络安全）",
+      "grade": "第68名",
+      "sort_order": 3
+    }
+  ],
+  "awards_prov": [
+    {
+      "id": 8,
+      "level": "provincial",
+      "date": "2025.09",
+      "name": "甘肃省第十五届挑战杯",
+      "grade": "省级特等奖",
+      "sort_order": 0
+    },
+    {
+      "id": 9,
+      "level": "provincial",
+      "date": "2025.06",
+      "name": "第十一届甘肃省大学生科技创新大赛",
+      "grade": "省级三等奖",
+      "sort_order": 1
+    },
+    {
+      "id": 10,
+      "level": "provincial",
+      "date": "2024.09",
+      "name": "第十四届挑战杯中国大学生创业计划竞赛",
+      "grade": "省级铜奖",
+      "sort_order": 2
+    },
+    {
+      "id": 11,
+      "level": "provincial",
+      "date": "2023.12",
+      "name": "第十三届新华三杯大学生数字技术大赛",
+      "grade": "省级二等奖",
+      "sort_order": 3
+    },
+    {
+      "id": 12,
+      "level": "provincial",
+      "date": "2025.05",
+      "name": "第二届帕鲁杯CTF竞赛· 应急先锋",
+      "grade": "全国第37名",
+      "sort_order": 4
+    },
+    {
+      "id": 13,
+      "level": "provincial",
+      "date": "2025.11",
+      "name": "甘肃省创新方法大赛",
+      "grade": "省级三等奖",
+      "sort_order": 5
+    }
+  ],
+  "awards_other": [
+    {
+      "id": 5,
+      "level": "other",
+      "date": "2025",
+      "name": "三好学生",
+      "grade": "",
+      "sort_order": 0
+    },
+    {
+      "id": 6,
+      "level": "other",
+      "date": "2024.05",
+      "name": "优秀共青团员",
+      "grade": "",
+      "sort_order": 1
+    },
+    {
+      "id": 7,
+      "level": "other",
+      "date": "2022.04",
+      "name": "新华三杯 · 省级二等奖",
+      "grade": "",
+      "sort_order": 2
+    }
+  ],
+  "certs": [
+    {
+      "id": 1,
+      "icon": "☁️",
+      "name": "ACA 助理工程师",
+      "description": "阿里云云计算助理工程师认证",
+      "sort_order": 0
+    },
+    {
+      "id": 2,
+      "icon": "🔐",
+      "name": "H3C-NE",
+      "description": "新华三网络安全工程师",
+      "sort_order": 0
+    },
+    {
+      "id": 3,
+      "icon": "📝",
+      "name": "软件著作权",
+      "description": "计算机软件著作权登记",
+      "sort_order": 0
+    },
+    {
+      "id": 4,
+      "icon": "🌍",
+      "name": "AGE Fellow",
+      "description": "AGE全球共建会Fellow",
+      "sort_order": 0
+    },
+    {
+      "id": 5,
+      "icon": "🤖",
+      "name": "CAAI会员",
+      "description": "中国人工智能学会",
+      "sort_order": 0
+    }
+  ],
+  "ctfs": [
+    {
+      "id": 1,
+      "date": "2025.05",
+      "description": "第二届齐鲁杯CTF大赛 — 应急先锋称号（全国排名39）",
+      "sort_order": 0
+    },
+    {
+      "id": 2,
+      "date": "2025.04",
+      "description": "第六届网络空间安全前沿论坛 · 青年论坛 — 科技成果展示",
+      "sort_order": 0
+    },
+    {
+      "id": 3,
+      "date": "2024.05",
+      "description": "ISCC信息安全竞赛",
+      "sort_order": 0
+    },
+    {
+      "id": 4,
+      "date": "2024.05",
+      "description": "第二届京麒CTF大赛",
+      "sort_order": 0
+    },
+    {
+      "id": 5,
+      "date": "2025.11",
+      "description": "全国AI Agent专题赛 — 最佳跨越奖",
+      "sort_order": 0
+    }
+  ],
+  "edu": [
+    {
+      "id": 1,
+      "type": "edu",
+      "icon": "🎓",
+      "title": "教育背景",
+      "school": "兰州博文科技学院",
+      "major": "信息管理与信息系统",
+      "year": "2022 - 2026",
+      "extra": "专业排名：前 3%",
+      "description": "信息安全基础, C++, SQL, 数据结构, 计算机网络",
+      "sort_order": 0
+    },
+    {
+      "id": 2,
+      "type": "intern",
+      "icon": "💼",
+      "title": "实习经历",
+      "school": "兰州佳谷信息技术有限公司",
+      "major": "网络工程师",
+      "year": "2024.07 - 2024.08",
+      "extra": "",
+      "description": "负责天水师范学院信息中心项目的网络设备安装部署与网络布线规划",
+      "sort_order": 0
+    }
+  ],
+  "honor_images": [
+    {
+      "name": "微信图片_20260601231757_535_53",
+      "level": "other",
+      "filename": "微信图片_20260601231757_535_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231758_536_53",
+      "level": "other",
+      "filename": "微信图片_20260601231758_536_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231759_538_53",
+      "level": "other",
+      "filename": "微信图片_20260601231759_538_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231800_539_53",
+      "level": "other",
+      "filename": "微信图片_20260601231800_539_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231802_540_53",
+      "level": "other",
+      "filename": "微信图片_20260601231802_540_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231803_541_53",
+      "level": "other",
+      "filename": "微信图片_20260601231803_541_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231804_542_53",
+      "level": "other",
+      "filename": "微信图片_20260601231804_542_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231805_543_53",
+      "level": "other",
+      "filename": "微信图片_20260601231805_543_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231806_544_53",
+      "level": "other",
+      "filename": "微信图片_20260601231806_544_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231807_545_53",
+      "level": "other",
+      "filename": "微信图片_20260601231807_545_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231808_546_53",
+      "level": "other",
+      "filename": "微信图片_20260601231808_546_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231809_547_53",
+      "level": "other",
+      "filename": "微信图片_20260601231809_547_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231810_548_53",
+      "level": "other",
+      "filename": "微信图片_20260601231810_548_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231811_549_53",
+      "level": "other",
+      "filename": "微信图片_20260601231811_549_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231812_550_53",
+      "level": "other",
+      "filename": "微信图片_20260601231812_550_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231813_551_53",
+      "level": "other",
+      "filename": "微信图片_20260601231813_551_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231814_552_53",
+      "level": "other",
+      "filename": "微信图片_20260601231814_552_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231815_553_53",
+      "level": "other",
+      "filename": "微信图片_20260601231815_553_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231816_554_53",
+      "level": "other",
+      "filename": "微信图片_20260601231816_554_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231817_555_53",
+      "level": "other",
+      "filename": "微信图片_20260601231817_555_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231818_556_53",
+      "level": "other",
+      "filename": "微信图片_20260601231818_556_53.jpg"
+    },
+    {
+      "name": "微信图片_20260601231819_557_53",
+      "level": "other",
+      "filename": "微信图片_20260601231819_557_53.jpg"
+    },
+    {
+      "name": "荣誉证书_H3C认证",
+      "level": "other",
+      "filename": "荣誉证书_H3C认证_other.jpg"
+    },
+    {
+      "name": "荣誉证书_挑战杯三等奖",
+      "level": "other",
+      "filename": "荣誉证书_挑战杯三等奖_other.jpg"
+    }
+  ]
+};

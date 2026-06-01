@@ -1,4 +1,4 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 {% block title %}{{ info.get("name","陶兴旺") }} | 网络安全 · AI安全{% endblock %}
 {% block content %}
 
@@ -114,6 +114,64 @@
       </div>
     </div>
     {% endfor %}
+  </div>
+</section>
+
+<section id="honor-wall-carousel" class="honor-wall-carousel section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><span class="num">🏆</span> 荣誉墙</h2>
+      <a href="/honors" class="view-all-link">查看全部 →</a>
+    </div>
+    <div class="carousel-container">
+      <div class="carousel-track" id="honorCarousel">
+        <div class="carousel-slide">
+          {% for img in images[:7] %}
+          <div class="carousel-card">
+            <img src="/images/{{ img.filename }}" alt="{{ img.name }}" class="carousel-image">
+            <div class="carousel-overlay">
+              <span class="carousel-name">{{ img.name }}</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="carousel-slide">
+          {% for img in images[7:14] %}
+          <div class="carousel-card">
+            <img src="/images/{{ img.filename }}" alt="{{ img.name }}" class="carousel-image">
+            <div class="carousel-overlay">
+              <span class="carousel-name">{{ img.name }}</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="carousel-slide">
+          {% for img in images[14:21] %}
+          <div class="carousel-card">
+            <img src="/images/{{ img.filename }}" alt="{{ img.name }}" class="carousel-image">
+            <div class="carousel-overlay">
+              <span class="carousel-name">{{ img.name }}</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <button class="carousel-btn carousel-prev" id="prevBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <button class="carousel-btn carousel-next" id="nextBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div class="carousel-indicators" id="carouselIndicators">
+        <button class="indicator active" data-index="0"></button>
+        <button class="indicator" data-index="1"></button>
+        <button class="indicator" data-index="2"></button>
+      </div>
+    </div>
   </div>
 </section>
 

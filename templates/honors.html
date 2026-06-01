@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}荣誉墙 | 陶兴旺{% endblock %}
+{% block content %}
+
+<section id="honors-wall" class="honors-wall section">
+  <div class="container">
+    <h2 class="section-title"><span class="num">🏅</span> 荣誉墙</h2>
+    <p class="section-subtitle">记录每一个奋斗的足迹，见证每一份来之不易的荣誉</p>
+    
+    <div class="honors-filter">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="national">国家级</button>
+      <button class="filter-btn" data-filter="provincial">省部级</button>
+      <button class="filter-btn" data-filter="other">其他</button>
+    </div>
+
+    <div class="honors-grid">
+      {% for img in images %}
+      <div class="honor-card" data-level="{{ img.level }}">
+        <div class="honor-image-wrapper">
+          <img src="/images/{{ img.filename }}" alt="{{ img.name }}" class="honor-image">
+          <div class="honor-overlay">
+            <span class="honor-name">{{ img.name }}</span>
+            <span class="honor-level">{{ "国家级" if img.level == "national" else "省部级" if img.level == "provincial" else "其他" }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if not images %}
+    <div class="empty-state">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M20 20H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+        <circle cx="12" cy="13" r="3"/>
+      </svg>
+      <p>暂无荣誉图片</p>
+      <p class="empty-hint">请在 images 目录添加以 "奖项名称_等级.jpg" 格式命名的图片</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const honorCards = document.querySelectorAll('.honor-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      
+      const filter = this.dataset.filter;
+      honorCards.forEach(card => {
+        if (filter === 'all' || card.dataset.level === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+{% endblock %}
